@@ -99,11 +99,11 @@ available on their website.
 
 4. gcc Compiler.tab.c 
 
-This generates the compiler executable: a.exe. The compiler executable takes 3 input parameters - Original C file, Intermediate file generated after preprocessing  and an empty assembly file. 
+This generates the compiler executable: a.exe 
 
 5. a.exe file.c file.i file.s
 
-Assembly code is written onto the provided empty assembly file - file.s
+The compiler executable takes 3 input parameters - original C file, intermediate file (TAC) generated  and an empty assembly file. Assembly code is written onto the provided empty assembly file - file.s
 
 6. gcc -m32 file.s 
 

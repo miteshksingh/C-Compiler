@@ -75,48 +75,49 @@ In the compiling step, we can generate 2 types ASM files - gcc ASM file and nasm
 
 ## How to execute:
 
-1: Install flex and bison and set their path.
+    1: Install flex and bison and set their path.
 
-System setup: 1 of the following 3 options:
-(1) Install Linux (Ubuntu) on your system
-(2) Install Cygwin on top of your Windows. http://cygwin.org/. If you
-have unlimited net access, you can get this.
-(3) Install Flex/Bison for Windows:
-http://gnuwin32.sourceforge.net/packages/flex.htm,
-http://gnuwin32.sourceforge.net/packages/bison.htm.
+        System setup: 1 of the following 3 options:
+        (1) Install Linux (Ubuntu) on your system
+        (2) Install Cygwin on top of your Windows. http://cygwin.org/. If you
+        have unlimited net access, you can get this.
+        (3) Install Flex/Bison for Windows:
+        http://gnuwin32.sourceforge.net/packages/flex.htm,
+        http://gnuwin32.sourceforge.net/packages/bison.htm.
 
-For (1) and (2), "gcc" will be there.
-If you already have a Windows system, (3) seems to be least
-disruptive. 
-If you have a Mac system, install Xcode development suite. It comes
-along with the Mac (not installed but in a DVD), and is also freely
-available on their website.
+        For (1) and (2), "gcc" will be there.
+        If you already have a Windows system, (3) seems to be least
+        disruptive. 
+        If you have a Mac system, install Xcode development suite. It comes
+        along with the Mac (not installed but in a DVD), and is also freely
+        available on their website.
 
 
-2: flex Compiler.l
+    2: flex Compiler.l
 
-3: bison Compiler.y
+    3: bison Compiler.y
 
-4: gcc Compiler.tab.c 
+    4: gcc Compiler.tab.c 
 
-This generates the compiler executable: a.exe or a.out on Mac
+        This generates the compiler executable: a.exe or a.out on Mac
 
-5: a.exe file.c file.i file.s 
+    5: a.exe file.c file.i file.s 
 
-The compiler executable takes 3 input parameters - original C file, an empty intermediate file and an empty assembly file. Intermediate code is written onto the .i file - file.i (argv[2])
-Assembly code is written onto the provided empty assembly file - file.s (argv[3])
+        The compiler executable takes 3 input parameters - original C file, an empty intermediate file and an empty assembly f   file. 
 
-Example on Mac:
-./a.out cg_test.c cg_test_run.i cg_test_run.s
+        On screen, the compiler outputs a sequence of productions being reduced. It displays the symbol table for all identifiers followed by the quadraple table. The quadraple table is used to generate the intermediate code (three address code) which is written onto the .i file - file.i (argv[2]). TAC is then used to generate the assembly code which is written onto the provided empty assembly file - file.s (argv[3])
 
-6: gcc -m32 file.s 
+        Example on Mac:
+        ./a.out cg_test.c cg_test_run.i cg_test_run.s
 
-Create an executable from the created assembly file to check if it produces the correct output. The assembler from the gcc is being used in this step.
+    6: gcc -m32 file.s 
 
-Example on Mac:
-gcc -m32 cg_test_run.s
+        Create an executable from the created assembly file to check if it produces the correct output. The assembler from the gcc  is being used in this step.
 
-7: a.exe
+        Example on Mac:
+        gcc -m32 cg_test_run.s
+
+    7: a.exe
 
 Example on Mac:
 ./a.out
@@ -129,16 +130,16 @@ The output will print all the grammer rules needed to parse the input C program.
 
 ## List of References
 
-(1) Compilers: Principles, Techniques and Tools: Aho, Lam, Sethi,
-Ullman. http://www.flipkart.com/compilers-principles-techniques-tools-2/p/itmdytt9apzffgwc?pid=9788131721018&otracker=from-search&srno=t_1&query=Aho+monica+lam+compilers&ref=0dfeb090-ad96-430a-95b7-28610d4370ca
-    Course will deal with first 600 pages.
+    (1) Compilers: Principles, Techniques and Tools: Aho, Lam, Sethi,
+    Ullman. http://www.flipkart.com/compilers-principles-techniques-tools-2/p/itmdytt9apzffgwc?pid=9788131721018&otracker=from-search&srno=t_1&query=Aho+monica+lam+compilers&ref=0dfeb090-ad96-430a-95b7-28610d4370ca
+        Course will deal with first 600 pages.
 
-(2) The C Programming Language K & R: pp191-240. The PDF is attached.
-The page# refers to the book (not the PDF). Take a printout of this
-and keep.
+    (2) The C Programming Language K & R: pp191-240. The PDF is attached.
+    The page# refers to the book (not the PDF). Take a printout of this
+    and keep.
 
-(3) Flex tool: http://dinosaur.compilertools.net/flex/index.html,
-http://flex.sourceforge.net/manual/
+    (3) Flex tool: http://dinosaur.compilertools.net/flex/index.html,
+    http://flex.sourceforge.net/manual/
 
-(4) Bison tool: http://dinosaur.compilertools.net/bison/index.html,
-http://www.gnu.org/software/bison/bison.html
+    (4) Bison tool: http://dinosaur.compilertools.net/bison/index.html,
+    http://www.gnu.org/software/bison/bison.html

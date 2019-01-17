@@ -23,11 +23,12 @@ Dependencies:Flex(Lexical Analyser),Bison(Parser Generator Tool)
 
 # Developing a mini-gcc compiler from end to end
 
-Assignment-1: Part-A: Comments Removal in a C-program
-Assignment-1: Part-B: Building a Lexical Analyzer for C
+## Assignment-1: 
+Part-A: Comments Removal in a C-program
+Part-B: Building a Lexical Analyzer for C
 
-Assignment-2: 
-Part-A: Building a Syntax Analyzer(parser) for C using the bison parser-generator and the grammar given in K & R (pp.234-238) 
+## Assignment-2: 
+Part-A: Building a Syntax Analyzer(parser) for C using the bison parser-generator and the grammar given in K & R (pp.234-238)
 Input: A C program (argv[1]).
 Output: On the screen, a sequence of productions being reduced. i.e. Rightmost derivation in Reverse.
 
@@ -42,7 +43,7 @@ identifier: name, type, line number of declaration, size (1 for
 non-arrays), initial value if any.
 
 
-Assignment-3: Intermediate Code Generation
+## Assignment-3: Intermediate Code Generation
 Input: A C-file
 Output: An intermediate code file, if there are no syntax errors, or
 errors caught due to various checking (lvalue, etc.)
@@ -63,7 +64,7 @@ Part-C: Control Constructs:
     C.1: If, else
     C.2: while loop
       
-Assignment-4: Generate the 80x86 assembly code from your intermediate code (Assignment-3)
+## Assignment-4: Generate the 80x86 assembly code from your intermediate code (Assignment-3)
 
 # Constructs supported by the compiler
 

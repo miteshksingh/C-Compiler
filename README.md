@@ -8,6 +8,7 @@ GCC Compilation Order
 2. compiling(.s-file)
 3. assembling(.o-file) - This is the object file. 
 4. linking (.exe-file) - Linker takes the object files and links it with other object files to produce executable file
+Please read here to know more about GCC Compilation Order - https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
 
 Dependencies:Flex(Lecaical Analyser),Bison(Parser Generator Tool)
 

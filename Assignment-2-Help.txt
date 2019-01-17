@@ -1,3 +1,4 @@
+# Part A
 
 Problem: Using the Grammar given in K & R (pp.234-238), build a parser
 for C using the bison parser-generator.
@@ -45,7 +46,52 @@ from beginning (1, 2, ...). Number the productions for same
 Non-Terminal on left as 1-a, 1-b etc. We will be referring to these
 for illustration purposes.
 
-(7) Assignment-2, Part-B will involve building a Symbol Table for
-identifiers in the input C program. Will explain this in next lab.
-Both together will be due 2 weeks from now (Feb.14). But my strong
-suggestion is, complete the Part-A by next week (Feb.7).
+# Part B
+
+Problem: Construct a Symbol Table for all the identifiers appearing in
+the input C-program.
+Input: A C-program as earlier (argv[1])
+Output:
+    - print error message and exit on duplicate declarations
+    - print error message and exit on usage without declarations
+    - if no error, print the symbol table after the parse is complete.
+The symbol table should contain these FIVE information for each
+identifier: name, type, line number of declaration, size (1 for
+non-arrays), initial value if any.
+
+Explanation:
+An identifier is used in 2 ways in a C-program:
+- Declaration/definition:
+    - int a;
+    - char x, y, z;
+    - float b = 10;
+    - double w[10];
+    - int c[ ] = {1, 2, 3};
+    There are more ways, but we will handle only these.
+- Usage in expressions
+
+You need to *IDENTIFY* the grammar productions for both of these, and
+write appropriate bison actions (in addition to the printfs you
+already have in Assignment-2, Part-A). For instance,
+(1) when you see an identifier as part of rule 23-a (or possibly one
+of its parents), you need to add that to symbol table (after possibly
+checking that it doesn't exist).
+(2) when you see a type specifier (or, initializer, etc.) you need to
+update the entry in the symbol table of the corresponding
+identifier(s).
+(3) instead of (1), (2) you can remember the information and add to
+symbol table when the parsing reduces rule-4.
+(4) when you encounter an identifier as part of an expression, e.g. in
+rule 63-a, you need to check if it is defined or not in the symbol
+table.
+
+As you see, this is an open problem, and you can do the same thing in
+many ways...
+
+In summary, at a high-level, you need to do 3 tasks:
+(a) define a symbol table in your program. Ideally, it would be an
+array of struct. The struct will have at least FIVE members.
+(b) write the symbol table functions (lookup, add, print, etc.)
+(c) write appropriate logic in the action part of bison productions
+making use of above functions.
+

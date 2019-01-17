@@ -23,16 +23,16 @@ Dependencies:Flex(Lexical Analyser),Bison(Parser Generator Tool)
 
 # Developing a mini-gcc compiler from end to end
 
-## Assignment-1: Building a Lexical Analyzer (tokens) for C
+## Assignment-1: Building a Lexical Analyzer for C
 
 ## Assignment-2: Building Syntx Analyzer for C and sybmol table for all identifiers
-###### Part-A: Building a Syntax Analyzer(parser) for C using the bison parser-generator and the grammar given in K & R (pp.234-238)
+##### Part-A: Building a Syntax Analyzer(parser) for C using the bison parser-generator and the grammar given in K & R (pp.234-238)
 
-Input: A C program (argv[1]).
+Input: A C program (argv[1])
 
 Output: On the screen, a sequence of productions being reduced. i.e. Rightmost derivation in Reverse.
 
-###### Part-B: Construct a Symbol Table for all the identifiers appearing in the input C-program.
+##### Part-B: Construct a Symbol Table for all the identifiers appearing in the input C-program.
 
 Input: A C-program as earlier (argv[1])
 
@@ -50,29 +50,26 @@ Input: A C-file
 Output: An intermediate code file, if there are no syntax errors, or
 errors caught due to various checking (lvalue, etc.)
 
-Part-A: 
+##### Part-A: Expressions:
 
-Expressions:
     A.1 Assignment expressions, operators: =, +, -, *, /
     A.2 joint assignment-operator expressions: +=, -= *=, /=
     A.3 Post-increment: ++, --
     A.4 Pre-increment: ++, --
     A.5 Unary Minus: -
 
-Part-B: 
+##### Part-B: Arrays:
 
-Arrays:
     B.1: Multi-dimension array declaration
     B.2: Array usage on right side: val = arr[index];
     B.3: Array usage on left side: arr[index] = val;
 
-Part-C: 
+##### Part-C: Control Constructs:
 
-Control Constructs:
     C.1: If, else
     C.2: while loop
       
-## Assignment-4: Generate the 80x86 assembly code from your intermediate code (Assignment-3)
+## Assignment-4: Generate the 80x86 assembly code from your intermediate code
 
 # Constructs supported by the compiler
 

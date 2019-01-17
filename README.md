@@ -15,6 +15,16 @@ Please read here to know more about GCC Compilation Order - https://www3.ntu.edu
 
 Dependencies:Flex(Lecaical Analyser),Bison(Parser Generator Tool)
 
+# Constructs supported by the compiler
+
+1. Simple Variable declaration and initialization.
+
+2. Any Dimension Array declaration and initialization. (Error on Redeclaration,Undeclaration,Dimension Mismatch,etc.)
+
+3. If Else Constructs
+
+4. While Loop Constucts(Simple Sorting Programs)
+
 # How to execute:
 
 1. Install flex and Bison and set their path.
@@ -34,13 +44,3 @@ Dependencies:Flex(Lecaical Analyser),Bison(Parser Generator Tool)
 # Output:
 
 The output will print all the grammer rules needed to parse the input C program. A Symbol table containing all variables is displayed. A Quadruple table used in generating intermediate code is also displayed. The Output of input C program is displayed.
-
-# Constructs supported by the compiler
-
-1.Simple Variable declaration and initialization.
-
-2.Any Dimension Array declaration and initialization. (Error on Redeclaration,Undeclaration,Dimension Mismatch,etc.)
-
-3.If Else Constructs
-
-4.While Loop Constucts(Simple Sorting Programs)

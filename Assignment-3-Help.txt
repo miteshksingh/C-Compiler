@@ -89,3 +89,6 @@ character is 'L' instead of 't'. You can have separate formats also.
 
 - Finally, in the sample outputs, i have not mixed these: IF-WHILE
 etc. This should also work.
+
+
+Submit the 2 files (.l and .y) as attachments

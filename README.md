@@ -32,6 +32,7 @@ non-arrays), initial value if any.
 
 ### Assignment-3: Intermediate Code Generation
 Input: A C-file
+
 Output: An intermediate code file, if there are no syntax errors, or
 errors caught due to various checking (lvalue, etc.)
 
@@ -108,7 +109,7 @@ available on their website.
 
 4. gcc Compiler.tab.c (This generates my compiler executable: a.exe)
 
-5. a.exe .c .i .s (<my-compiler-executable> <file>.c <file>.i <file>.s) 
+5. a.exe .c .i .s (my-compiler-executable file.c file.i file.s) 
 
 6. gcc -m32 .s
 

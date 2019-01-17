@@ -8,7 +8,7 @@ Knowing how the most rudimentary constructs like loops, function calls and varia
 GCC Compilation Order
 1. preprocessing (.i-file) - Macro substitution, comments are stripped off and Exapansion of the included files
 2. compiling(.s-file) - Compiler takes .i file as input, compiles it and produces an intermediate compiled output
-3. assembling(.o-file) - Assembler takes .s file as input and produces .o object file. 
+3. assembling(.o-file) - Assembler converts .s file with assembly instructions into .o object file with machine level instructions.
 4. linking (.exe-file) - Linker takes the object files and links it with other object files to produce executable file
 
 Please read here to know more about GCC Compilation Order - https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html

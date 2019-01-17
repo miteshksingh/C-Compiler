@@ -1,0 +1,9 @@
+Please find a simple C-program count_char.c, which counts the
+number of occurrences of the letter "a" in an input file.
+
+(a) First compile and run it on your machine to make sure it works.
+
+(b) Then, modify the program to count the number of occurrences of a
+given string (instead of a char) in an input file.
+
+This example will be used as a motivator for lexical analyzer generators.

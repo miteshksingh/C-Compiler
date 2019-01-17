@@ -1,7 +1,9 @@
 # C-Compiler
 
 
-A Small C Compiler which can handle simple sorting programs. This is just a basic compiler for preliminary anaysis of all phases of Compiler Design. The .l file generates tokens from input C program and passes to .y file which deals with the Syntactic and Semantic phases.An Intermediate Code is generated.This Intermediated Code is then stored in Quadruple Table. All Statements from Quadruple table are Converted into Assembly Instructions in GCC AT&T Syntax.This generates .s file which can be successfully executed to give desired output of input program.
+A small C Compiler which can handle simple sorting programs. This is just a basic compiler for preliminary anaysis of all phases of Compiler Design. The .l file generates tokens from input C program and passes to .y file which deals with the syntactic and semantic phases.An intermediate code is generated.This intermediated code is then stored in quadruple table. All statements from quadruple table are converted into assembly instructions in GCC AT&T Syntax. 
+
+Knowing how the most rudimentary constructs like loops, function calls and variable declaration are mapped into assembly language helps to understand C internals. Compilers for high level language like C/C++ have the ability to translate high level language into assembly language. Unlike C language, there are variations w.r.t the 80x86 assembly syntax. The GNU C and C++ compiler option of -S will generate an assembly code equivalent to that of the corresponding source program.  By default, GCC makes the assembler file name by replacing the suffix '.c' with '.s'. This generates .s file which can be successfully executed to give desired output of input program.
 
 GCC Compilation Order
 1. preprocessing (.i-file)

@@ -1,3 +1,5 @@
+# Assignment 3: Part A 
+
 Pl see files ic_expr.c as input file sample and ic_expr.i as output file sample for Part-A: Expressions.
 
 Note:
@@ -22,3 +24,68 @@ a = b + c;
 it is OK to generate the same single line, and not the 2-lines:
 t1 = b + c
 a = t1
+
+# Assignment 3: Part B
+
+Please see ic_array.c, ic_array.i, ic_array_error.c and ic_array_error.i for Intermediate Code generation
+for array operations.
+
+For this, you may want to refer to Example 6.9 (pp. 375), and Sec. 6.4.3, 6.4.4.
+One thing you need to note is, the book is based on inherited
+attributes we discussed in class (Fig. 6.16 is a perfect example).
+As Bison can't have inherited attributes, you "simulate" it by
+remembering things in a global variable.
+
+Notes:
+- Pay particular attention to address calculation. This was done by
+many of you last week, and is also given in Sec. 6.4.3.
+
+- The final array reference is always 1-D.
+    In lab last week, you inputted the multi-dimension indices from
+the user after yyparse, and then converted it to 1-D. Now, this
+multi-dimension reference will appear in your input program. That's
+it.
+
+- You need to save the final 1-D in a temp ONLY if it is on Right Side of =.
+
+i = a[ j ];
+will become
+t0 = a[ j ]
+i = t0
+
+whereas,
+a[ i ] = j;
+will remain
+a[ i ] = j
+
+- C allows (with warning) dimension mismatch on Right Side, but gives
+error if there is a mismatch on left side.
+
+int i, a[10];
+a = i;
+This will give an error. Try it.
+
+whereas,
+i = a;
+will give warning. Again try it. Here it assigns &a[0] to i.
+But as we are not dealing with pointers, let this also give an error.
+
+- Finally, as in the sample files, we are ignoring the Type mismatches...
+
+# Assignment 3: Part C
+
+Pl see ic_if.c, ic_if.i, ic_if_else.c, ic_if_else.i, ic_while.c, ic_while.i for Control Constructs (IF, IF-ELSE, WHILE).
+
+Notes:
+- First read the output and convince yourself that it is correct.
+
+- All files have increasing complexity: simple -> nested.
+
+- The create_label is the same function as create_temp. Only 1st
+character is 'L' instead of 't'. You can have separate formats also.
+
+- You need to write rules (similar to arithmetic expressions) for
+49-b, 50-b, 54-b,c, 55-b,c,d,e.
+
+- Finally, in the sample outputs, i have not mixed these: IF-WHILE
+etc. This should also work.

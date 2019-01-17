@@ -1,4 +1,4 @@
-Pl find attached sample output for Part-A: Expressions.
+Pl see files ic_expr.c as input file sample and ic_expr.i as output file sample for Part-A: Expressions.
 
 Note:
 (a) Make the output (intermediate code file) go into argv[2] (similar

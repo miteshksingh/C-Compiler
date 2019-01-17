@@ -103,11 +103,12 @@ This generates the compiler executable: a.exe
 
 5. a.exe file.c file.i file.s
 
-The compiler executable takes 3 input parameters - original C file, intermediate file (TAC) generated  and an empty assembly file. Assembly code is written onto the provided empty assembly file - file.s
+The compiler executable takes 3 input parameters - original C file, an empty intermediate file and an empty assembly file. Intermediate code is written onto the .i file - file.i (argv[2])
+Assembly code is written onto the provided empty assembly file - file.s (argv[3])
 
 6. gcc -m32 file.s 
 
-Create an executable from the created assembly file to check if it produces the correct output. The assembler from the gcc is being used in this step.)
+Create an executable from the created assembly file to check if it produces the correct output. The assembler from the gcc is being used in this step.
 
 7. a.exe
 

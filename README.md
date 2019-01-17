@@ -11,9 +11,14 @@ GCC Compilation Order
 3. assembling(.o-file) - Assembler converts .s file with assembly instructions into .o object file with machine level instructions. Only the existing code is converted into machine language, the function calls like printf() are not resolved.
 4. linking (.exe-file) - Linker takes the object files and links it with other object files to produce executable file
 
-Please read here to know more about GCC Compilation Order - https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
+Please read here to know more about GCC Compilation Order
+https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
+https://www.thegeekstuff.com/2011/10/c-program-to-an-executable/
 
-Dependencies:Flex(Lecaical Analyser),Bison(Parser Generator Tool)
+Note:
+In the compiling step, we can generate 2 types ASM files - gcc ASM file and nasm ASM file. Both assembly syntax is valid for 80x86 processor. We generate the GCC AT&T syntax.
+
+Dependencies:Flex(Lexical Analyser),Bison(Parser Generator Tool)
 
 # Constructs supported by the compiler
 

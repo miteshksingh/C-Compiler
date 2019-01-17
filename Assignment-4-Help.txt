@@ -1,5 +1,7 @@
 Generate the 80x86 assembly code from your intermediate code (Assignment-3).
 
+Test your code on cg_test.c. You have been given 4 files to validate your output - cg_test.c, cg_test.i, cg_gcc.s, cg_nasm.s
+
 Knowing how the most rudimentary constructs like loops, function calls and variable declaration are mapped into assembly language helps to understand C internals. Compilers for high level language like C/C++ have the ability to translate high level language into assembly language. Unlike C language, there are variations w.r.t the 80x86 assembly syntax. The GNU C and C++ compiler option of -S will generate an assembly code equivalent to that of the corresponding source program.  By default, GCC makes the assembler file name by replacing the suffix '.c' with '.s'. This generates .s file which can be successfully executed to give desired output of input program.
 
 GCC Compilation Order

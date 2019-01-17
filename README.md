@@ -6,9 +6,9 @@ A small C Compiler which can handle simple sorting programs. This is a basic com
 Knowing how the most rudimentary constructs like loops, function calls and variable declaration are mapped into assembly language helps to understand C internals. Compilers for high level language like C/C++ have the ability to translate high level language into assembly language. Unlike C language, there are variations w.r.t the 80x86 assembly syntax. The GNU C and C++ compiler option of -S will generate an assembly code equivalent to that of the corresponding source program.  By default, GCC makes the assembler file name by replacing the suffix '.c' with '.s'. This generates .s file which can be successfully executed to give desired output of input program.
 
 GCC Compilation Order
-1. preprocessing (.i-file)
-2. compiling(.s-file)
-3. assembling(.o-file) - This is the object file. 
+1. preprocessing (.i-file) - Macro substitution, comments are stripped off and Exapansion of the included files
+2. compiling(.s-file) - Compiler takes .i file as input, compiles it and produces an intermediate compiled output
+3. assembling(.o-file) - Assembler takes .s file as input and produces .o object file. 
 4. linking (.exe-file) - Linker takes the object files and links it with other object files to produce executable file
 
 Please read here to know more about GCC Compilation Order - https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html

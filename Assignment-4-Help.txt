@@ -1,5 +1,17 @@
 Generate the 80x86 assembly code from your intermediate code (Assignment-3).
 
+Knowing how the most rudimentary constructs like loops, function calls and variable declaration are mapped into assembly language helps to understand C internals. Compilers for high level language like C/C++ have the ability to translate high level language into assembly language. Unlike C language, there are variations w.r.t the 80x86 assembly syntax. The GNU C and C++ compiler option of -S will generate an assembly code equivalent to that of the corresponding source program.  By default, GCC makes the assembler file name by replacing the suffix '.c' with '.s'. This generates .s file which can be successfully executed to give desired output of input program.
+
+GCC Compilation Order
+1. preprocessing (.i-file) - Macro substitution, comments are stripped off and Exapansion of the included files
+2. compiling(.s-file) - Compiler takes .i file as input, compiles it and produces an intermediate compiled output
+3. assembling(.o-file) - Assembler converts .s file with assembly instructions into .o object file with machine level instructions. Only the existing code is converted into machine language, the function calls like printf() are not resolved.
+4. linking (.exe-file) - Linker takes the object files and links it with other object files to produce executable file
+
+Please read here to know more about GCC Compilation Order
+https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
+https://www.thegeekstuff.com/2011/10/c-program-to-an-executable/
+
 Following are the 4 steps:
 
 (0) Understand the 80x86 assembly (either in GAS syntax on NASM

@@ -23,17 +23,19 @@ Dependencies:Flex(Lexical Analyser),Bison(Parser Generator Tool)
 
 # Developing a mini-gcc compiler from end to end
 
-## Assignment-1: 
-Part-A: Comments Removal in a C-program
-Part-B: Building a Lexical Analyzer for C
+## Assignment-1: Building a Lexical Analyzer (tokens) for C
 
-## Assignment-2: 
+## Assignment-2: Building Syntx Analyzer for C and sybmol table for all identifiers
 Part-A: Building a Syntax Analyzer(parser) for C using the bison parser-generator and the grammar given in K & R (pp.234-238)
+
 Input: A C program (argv[1]).
+
 Output: On the screen, a sequence of productions being reduced. i.e. Rightmost derivation in Reverse.
 
 Part-B: Construct a Symbol Table for all the identifiers appearing in the input C-program.
+
 Input: A C-program as earlier (argv[1])
+
 Output:
     - print error message and exit on duplicate declarations
     - print error message and exit on usage without declarations

@@ -1,0 +1,24 @@
+Pl find attached sample output for Part-A: Expressions.
+
+Note:
+(a) Make the output (intermediate code file) go into argv[2] (similar
+to the comment-less output file you have generated in the lex
+comments-removal program).
+    So, where ever we discussed printf for outputting intermediate
+code, make it fprintf...
+
+(b) For post-increment, I am incrementing immediately after storing
+original in a temporary variable, and NOT waiting till assignment. You
+can do in other ways too (incrementing after the assignment as most
+compilers do).
+
+    If anyone finds in C-standard the correct behavior, let me know.
+
+(c) This is a suggestive output; your output need not match this. For instance,
+(c.1) the temporary names can be in some another format.
+(c.2) for the simple assignment
+a = b + c;
+
+it is OK to generate the same single line, and not the 2-lines:
+t1 = b + c
+a = t1

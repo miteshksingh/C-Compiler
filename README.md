@@ -99,12 +99,15 @@ available on their website.
 
 4. gcc Compiler.tab.c 
 
-This generates the compiler executable: a.exe 
+This generates the compiler executable: a.exe or a.out on Mac
 
-5. a.exe file.c file.i file.s
+5. a.exe file.c file.i file.s 
 
 The compiler executable takes 3 input parameters - original C file, an empty intermediate file and an empty assembly file. Intermediate code is written onto the .i file - file.i (argv[2])
 Assembly code is written onto the provided empty assembly file - file.s (argv[3])
+
+Example on Mac:
+
 
 6. gcc -m32 file.s 
 

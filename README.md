@@ -95,11 +95,17 @@ available on their website.
 
 3. bison Compiler.y
 
-4. gcc Compiler.tab.c (This generates my compiler executable: a.exe)
+4. gcc Compiler.tab.c 
 
-5. a.exe .c .i .s (my-compiler-executable file.c file.i file.s) 
+This generates the compiler executable: a.exe. The compiler executable takes 3 input parameters - Original C file, Intermediate file generated after preprocessing  and an empty assembly file. 
 
-6. gcc -m32 .s
+5. a.exe file.c file.i file.s
+
+Assembly code is written onto the provided empty assembly file - file.s
+
+6. gcc -m32 file.s 
+
+Create an executable from the created assembly file to check if it produces the correct output. The assembler from the gcc is being used in this step.)
 
 7. a.exe
 

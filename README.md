@@ -32,7 +32,7 @@ identifier: name, type, line number of declaration, size (1 for
 non-arrays), initial value if any.
 
 
-### Assignment-3: Intermediate Code Generation
+### Assignment-3: Intermediate Code Generation (Three Address Code file - .i file)
 Input: A C-file
 
 Output: An intermediate code file, if there are no syntax errors, or
@@ -57,7 +57,7 @@ errors caught due to various checking (lvalue, etc.)
     C.1: If, else
     C.2: while loop
       
-### Assignment-4: Generate the 80x86 assembly code from your intermediate code
+### Assignment-4: Generate the 80x86 assembly code (.s file) from your intermediate code (.i file)
 
 Note:
 In the compiling step, we can generate 2 types ASM files - gcc ASM file and nasm ASM file. Both assembly syntax is valid for 80x86 processor. We generate the GCC AT&T syntax.

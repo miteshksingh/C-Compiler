@@ -45,6 +45,22 @@ Assignment-4: Generate the 80x86 assembly code from your intermediate code (Assi
 
 1. Install flex and bison and set their path.
 
+System setup: 1 of the following 3 options:
+(1) Install Linux (Ubuntu) on your system
+(2) Install Cygwin on top of your Windows. http://cygwin.org/. If you
+have unlimited net access, you can get this.
+(3) Install Flex/Bison for Windows:
+http://gnuwin32.sourceforge.net/packages/flex.htm,
+http://gnuwin32.sourceforge.net/packages/bison.htm.
+
+For (1) and (2), "gcc" will be there.
+If you already have a Windows system, (3) seems to be least
+disruptive. 
+If you have a Mac system, install Xcode development suite. It comes
+along with the Mac (not installed but in a DVD), and is also freely
+available on their website.
+
+
 2. flex Compiler.l
 
 3. bison Compiler.y
@@ -60,3 +76,19 @@ Assignment-4: Generate the 80x86 assembly code from your intermediate code (Assi
 # Output:
 
 The output will print all the grammer rules needed to parse the input C program. A symbol table containing all variables is displayed. A quadruple table used in generating intermediate code is also displayed. The output of input C program is displayed.
+
+# List of References
+
+(1) Compilers: Principles, Techniques and Tools: Aho, Lam, Sethi,
+Ullman. http://www.flipkart.com/compilers-principles-techniques-tools-2/p/itmdytt9apzffgwc?pid=9788131721018&otracker=from-search&srno=t_1&query=Aho+monica+lam+compilers&ref=0dfeb090-ad96-430a-95b7-28610d4370ca
+    Course will deal with first 600 pages.
+
+(2) The C Programming Language K & R: pp191-240. The PDF is attached.
+The page# refers to the book (not the PDF). Take a printout of this
+and keep.
+
+(3) Flex tool: http://dinosaur.compilertools.net/flex/index.html,
+http://flex.sourceforge.net/manual/
+
+(4) Bison tool: http://dinosaur.compilertools.net/bison/index.html,
+http://www.gnu.org/software/bison/bison.html

@@ -6,7 +6,7 @@ A mini-gcc compiler which can handle simple sorting programs. The .l file genera
 
 Dependencies:Flex(Lexical Analyser),Bison(Parser Generator Tool)
 
-# Developing a mini-gcc compiler from end to end
+## Developing a mini-gcc compiler from end to end
 
 ### Assignment-1: Building a Lexical Analyzer for C
 
@@ -63,7 +63,7 @@ Note:
 In the compiling step, we can generate 2 types ASM files - gcc ASM file and nasm ASM file. Both assembly syntax is valid for 80x86 processor. We generate the GCC AT&T syntax.
 
 
-# Constructs supported by the compiler
+## Constructs supported by the compiler
 
 1. Simple variable declaration and initialization.
 
@@ -73,7 +73,7 @@ In the compiling step, we can generate 2 types ASM files - gcc ASM file and nasm
 
 4. While loop constucts(simple sorting programs)
 
-# How to execute:
+## How to execute:
 
 1. Install flex and bison and set their path.
 
@@ -111,11 +111,11 @@ Create an executable from the created assembly file to check if it produces the 
 
 7. a.exe
 
-# Output:
+## Output:
 
 The output will print all the grammer rules needed to parse the input C program. A symbol table containing all variables is displayed. A quadruple table used in generating intermediate code is also displayed. The output of input C program is displayed.
 
-# List of References
+## List of References
 
 (1) Compilers: Principles, Techniques and Tools: Aho, Lam, Sethi,
 Ullman. http://www.flipkart.com/compilers-principles-techniques-tools-2/p/itmdytt9apzffgwc?pid=9788131721018&otracker=from-search&srno=t_1&query=Aho+monica+lam+compilers&ref=0dfeb090-ad96-430a-95b7-28610d4370ca

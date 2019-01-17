@@ -22,9 +22,11 @@ Output: On the screen, a sequence of productions being reduced. i.e. Rightmost d
 Input: A C-program as earlier (argv[1])
 
 Output:
-    - print error message and exit on duplicate declarations
-    - print error message and exit on usage without declarations
-    - if no error, print the symbol table after the parse is complete.
+
+    O.1: print error message and exit on duplicate declarations
+    O.2: print error message and exit on usage without declarations
+    O.3: if no error, print the symbol table after the parse is complete.
+ 
 The symbol table should contain these FIVE information for each
 identifier: name, type, line number of declaration, size (1 for
 non-arrays), initial value if any.

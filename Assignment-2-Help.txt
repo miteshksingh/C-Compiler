@@ -1,0 +1,51 @@
+
+Problem: Using the Grammar given in K & R (pp.234-238), build a parser
+for C using the bison parser-generator.
+Input: A C program (argv[1] as earlier).
+Output: On the screen, a sequence of productions being reduced. i.e.
+Rightmost derivation in Reverse.
+
+Notes:
+(1) The printfs of Assignment-1, Part-A will be the tokens now. This
+is the reason I had mentioned to have single names while printing.
+    - You need to return <token_name> now in the flex action part.
+    - Remove the printfs in flex program.
+
+(2) Type the grammar for bison using the syntax learnt while working
+with the expression-grammar.
+    2.a. The italicized names are non-terminals.
+    2.b. translation-unit is the Start symbol.
+    2.c. Terminals are
+        - characters directly shown (+, ++ etc.),
+        - regular non-italic words (auto, register etc.),
+        - integer-constant, character-constant, floating-constant,
+identifier, string, enumeration-constant.
+    You can have exponent-constant if desired, or merge it with
+floating-constant.
+
+(3) For the action part of each production, have a
+    { printf("\t: <left_side> : <right_side>\n"); }
+
+(4) Just mechanically typing the grammar is trivial. As mentioned,
+understand all the preceding pages (pp.191-228). You can skip the
+pre-processor part. *** The viva will be based on this understanding,
+(along with bison understanding). Most importantly, it will be a good
+preparation for the upcoming campus-interviews.
+
+(5) While implementing, take care of the following:
+    5.a. The productions having <opt> need to be duplicated, once with
+that symbol, once without that. *** Some may be tricky!
+    5.b. The productions having "one of" need to be appropriately handled.
+    5.c. Remove the "typedef_name: identifier production", and make it
+a Terminal (token).
+        These 3 are mentioned in the beginning of pp.234.
+
+(6) Take a printout of the 5 Grammar pages, and number all productions
+from beginning (1, 2, ...). Number the productions for same
+Non-Terminal on left as 1-a, 1-b etc. We will be referring to these
+for illustration purposes.
+
+(7) Assignment-2, Part-B will involve building a Symbol Table for
+identifiers in the input C program. Will explain this in next lab.
+Both together will be due 2 weeks from now (Feb.14). But my strong
+suggestion is, complete the Part-A by next week (Feb.7).

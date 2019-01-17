@@ -111,6 +111,8 @@ Create an executable from the created assembly file to check if it produces the 
 
 7. a.exe
 
+Test your compiler on the file cg_test.c
+
 ## Output:
 
 The output will print all the grammer rules needed to parse the input C program. A symbol table containing all variables is displayed. A quadruple table used in generating intermediate code is also displayed. The output of input C program is displayed.

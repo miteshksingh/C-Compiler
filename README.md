@@ -15,27 +15,27 @@ Please read here to know more about GCC Compilation Order - https://www3.ntu.edu
 
 Dependencies:Flex(Lecaical Analyser),Bison(Parser Generator Tool)
 
-How to execute:
+# How to execute:
 
-1.Install flex and Bison and set their path.
+1. Install flex and Bison and set their path.
 
-2.flex Compiler.l
+2. flex Compiler.l
 
-3.bison Compiler.y
+3. bison Compiler.y
 
-4.gcc Compiler.tab.c
+4. gcc Compiler.tab.c
 
-5.a.exe .c .i .s
+5. a.exe .c .i .s
 
-6.gcc -m32 .s
+6. gcc -m32 .s
 
-7.a.exe
+7. a.exe
 
-Output:
+# Output:
 
 The output will print all the grammer rules needed to parse the input C program. A Symbol table containing all variables is displayed. A Quadruple table used in generating intermediate code is also displayed. The Output of input C program is displayed.
 
-The constructs supported by the compiler are
+# Constructs supported by the compiler
 
 1.Simple Variable declaration and initialization.
 

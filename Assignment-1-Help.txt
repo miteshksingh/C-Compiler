@@ -1,0 +1,101 @@
+# Part A
+
+Write a Lex program for:
+Given an input C-program (argv[1]), remove all comments, and output a
+program  (argv[2]) without comments.
+
+You have to handle all FIVE types of comments:
+
+(1)
+// Single line comment
+
+(2)
+/* Multi line
+    comment */
+
+(3)
+/* Nested-1:
+// Single line  comment within a
+Multi line comment
+*/
+
+(4)
+/* Nested-2:
+    /* Multi line
+        comment within */
+   another Multi line comment
+*/
+
+(5)
+// Nested-3: /* Multi line comment with a single line comment
+    flowing to next line */
+
+
+Step-1: Figure out the behavior first. (1), (2) are straight forward.
+You need to discover how (3)-(5) behave. It may(?) happen that some
+lines are not deleted!
+Step-2: Give the output file, which removes the comments according to
+rule you discover in Step-1.
+
+Note-0: Try to complete this in today's lab.
+Note-1: Submission instructions will be given with Part-B of the assignment.
+Note-2: Evaluation will happen by testing your program on sample
+inputs of increasing complexity. So,
+    - if you do only (1), (2) you will definitely get some marks.
+    - but if you do all, and have copied (say only (5)), you will get ZERO.
+    
+    
+# Part B
+
+Write a Lex program, which:
+Given an input C-program, outputs a stream of tokens (other than
+blank, tab, \n) on the screen.
+
+Output should be of the form:
+<lineno>: <token_name> <OPTIONAL token_attribute>
+
+As discussed, there are FIVE categories of tokens:
+(1) Keywords (e.g. for, while, if, char, int etc.):
+    - Each keyword should be given a separate token_name.
+    - No token_attribute
+    - There are 32 keywords in C-language.
+
+(2) Operators (e.g. +, ++, +=, etc.)
+    - Each operator should be given a separate token_name.
+    - No token_attribute
+
+(3) Punctuation marks (e.g. {, }, (, ) etc.)
+    - Each keyword should be given a separate token_name.
+    - No token_attribute
+
+(4) Identifiers (e.g. name of functions, variables etc.)
+    - Common token_name = IDENTIFIER
+    - token_attribute: actual identifier string
+
+(5) Constants
+    5.1: Whole numbers (positive only, as negative sign should be
+classified as an operator)
+        - Common token_name = NUMBER
+        - token_attribute: actual number
+    5.2: Real numbers (e.g. 12.34)
+        - Common token_name = REAL_NUMBER
+        - token_attribute: actual number
+    5.3: Exponential numbers (e.g. 12.34e+56.78)
+        - Common token_name = EXP_NUMBER
+        - token_attribute: actual number
+    5.4: Character constants (e.g. 'A')
+        - Common token_name = CHAR_CONSTANT
+        - token_attribute: actual character
+    5.5: String constants (e.g. "ABC")
+        - Common token_name = STRING_CONSTANT
+        - token_attribute: actual string
+
+Notes:
+1. Submission deadline: next Friday, Jan.24, 8.50am, (before the lab).
+2. Email 2 flex files
+    - <your_roll_number>_comments.l (comment removal program)
+    - <your_roll_number>.l (C language tokens program)
+3. For the C language tokens program, there is no argv[2] as in the
+comments program.
+4. Let all token_names be single words. Reason being, that information
+will be used in parser.

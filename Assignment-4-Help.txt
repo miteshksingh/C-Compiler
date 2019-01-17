@@ -100,3 +100,94 @@ printtext: dd "%d", 10, 0
         - Then have all variables from symbol table, according to
 their type, initial value etc. For this you need to see the syntax of
 variable declaration.
+
+
+80x86 Assembler Options
+
+Unlike C language, there are variations w.r.t the 80x86 assembly
+syntax. Two options are discussed below.
+PFA the sample files for both the formats. I am trying to integrate
+the library function printf with the assembly code. Idea is that, in
+addition to seeing the correctness of the assembly code generated
+(using *your* compiler), we can infact run it, and check the output.
+Notes:
+    - It is "globl" and not "global" in gcc syntax.
+    - It is "_printf" and not "printf"
+    - There are 2 sections: .text and .data
+    - You will be generating MOST of the contents of this file from
+the Intermediate file, other than the header/footer/printfs.
+
+Running the sample programs:
+--------------------------------------------
+(1) using gcc: called AT&T syntax. This internally uses GAS (Gnu-ASsembler).
+    (a) The code is in cg_gcc.s
+    (b) Run gcc -m32 cg_gcc.s
+        - m32 is for 32-bit machines, as i noticed some easy features
+like direct memory access are not permitted in 64 bit option (which is
+the default option in 64-bit machines).
+    (c) a.exe
+
+(2) using NASM: called Intel syntax. (www.nasm.us)
+    (a) Goto http://www.nasm.us/pub/nasm/releasebuilds/2.11/, and
+download the ZIP file from the appropriate directory.
+    (b) Unzip it.
+        - From the point you unzip, you will get
+"nasm/nasm-2.11/nasm.exe" as the executable.
+    (c) Run nasm/nasm-2.11/nasm.exe -f elf cg_nasm.s
+        - -f is the output file format.
+        - For Linux, it may be same or may have to be changed
+            - For a listing of options, see nasm/nasm-2.11/nasm.exe -hf
+        - For Mac, it is -f macho32.
+        - This will create cg_nasm.o
+    (d) Run gcc cg_nasm.o
+        - Can put the -m32 option if gcc complains.
+    (e) a.exe
+
+See http://en.wikipedia.org/wiki/X86_assembly_language, especially the
+comparison between the 2 options. Also note the various registers
+available.
+Further comparison can be found at https://github.com/yasm/yasm/wiki/Gassyntax.
+
+The opcodes remain the same (other than adding appropriate suffix when
+using gcc): http://en.wikipedia.org/wiki/X86_instruction_listings
+
+Platforms:
+    - I have tested out in the Win-8 machines in the Lab. I guess most
+of you have this configuration. It hangs at the end for the gcc option
+after showing the result, but i guess it should not be an issue.
+    - I haven't tried on Linux, but it should work.
+    - Yet to get it working on Mac. Without printf call it is fine.
+With printf both gcc and nasm are giving segmentation fault.
+
+Do these activities in the lab:
+(1) Pick one of these formats. You should be active to get any
+problem/bug fixed by searching online.
+(2) Understand the meaning of each line. If you think some line is
+redundant, delete it and check.
+(3) Develop a simple "print elements of an array" program in assembly. For
+this, figure out
+    - how arrays (only 1-d) are declared, and
+    - how they are accessed.
+(4) Develop the searching in an array program.
+
+Suppose you have a C-input file statement:
+i = j + k.
+
+Your intermediate code will be:
+t0 = j + k
+i = t0
+This is ASSIGNMENT-3
+
+Now, the next and last step is, converting this to Assembly code.
+The output should be (in NASM syntax):
+
+mov eax, [ j ]
+add eax, [ k ]
+mov [ t0 ], eax
+
+mov eax, [ t0 ]
+mov [ i ], eax
+
+As STEP-0, you need to understand the ASM syntax, which is the purpose
+of this lab.
+The printf which i have given will be last part of your ASM output...

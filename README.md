@@ -20,7 +20,9 @@ Note:
 In the compiling step, we can generate 2 types ASM files - gcc ASM file and nasm ASM file. Both assembly syntax is valid for 80x86 processor. We generate the GCC AT&T syntax.
 
 Dependencies:Flex(Lexical Analyser),Bison(Parser Generator Tool)
-# How was this compiler built?
+
+# Developing a mini-gcc compiler from end to end
+
 Assignment-1: Part-A: Comments Removal in a C-program
 Assignment-1: Part-B: Building a Lexical Analyzer for C
 
@@ -31,13 +33,13 @@ Assignment-4: Generate the 80x86 assembly code from your intermediate code (Assi
 
 # Constructs supported by the compiler
 
-1. Simple Variable declaration and initialization.
+1. Simple variable declaration and initialization.
 
-2. Any Dimension Array declaration and initialization. (Error on Redeclaration,Undeclaration,Dimension Mismatch,etc.)
+2. Any dimension array declaration and initialization. (Error on redeclaration, undeclaration, dimension Mismatch, etc.)
 
-3. If Else Constructs
+3. If else constructs
 
-4. While Loop Constucts(Simple Sorting Programs)
+4. While loop constucts(simple sorting programs)
 
 # How to execute:
 

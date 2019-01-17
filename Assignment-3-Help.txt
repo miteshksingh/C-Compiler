@@ -92,3 +92,4 @@ etc. This should also work.
 
 
 Submit the 2 files (.l and .y) as attachments
+The final output will be tested on cg_1.c, cg_2.c and cg_3.c

@@ -65,13 +65,10 @@ In the compiling step, we can generate 2 types ASM files - gcc ASM file and nasm
 
 ## Constructs supported by the compiler
 
-1. Simple variable declaration and initialization.
-
-2. Any dimension array declaration and initialization. (Error on redeclaration, undeclaration, dimension Mismatch, etc.)
-
-3. If else constructs
-
-4. While loop constucts(simple sorting programs)
+    1. Simple variable declaration and initialization.
+    2. Any dimension array declaration and initialization. (Error on redeclaration, undeclaration, dimension Mismatch, etc.)
+    3. If else constructs
+    4. While loop constucts (simple sorting programs)
 
 ## How to execute:
 

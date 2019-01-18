@@ -2,7 +2,9 @@
 
 Developed for preliminary anaysis of all phases of Compiler Design in the course CS6105 at BIT Mesra under the guidance for Prof. Arun A Somasundara. 
 
-A mini-gcc compiler which can handle simple sorting programs. The .l file generates tokens from input C program and passes to .y file which deals with the syntactic and semantic phases. An intermediate code is generated. This intermediated code is then stored in quadruple table. All statements from quadruple table are converted into assembly instructions in GCC AT&T Syntax. 
+A mini-gcc compiler which can handle simple sorting programs. The .l file generates tokens from input C program and passes to .y file which deals with the syntactic and semantic phases. An intermediate code is generated. This intermediated code is then stored in quadruple table. All statements from quadruple table are used to generate TAC (three address code). This intermediated code is then converted by the compiler into assembly instructions in GCC AT&T Syntax. 
+
+Please look at CompilerOutput.png to see the output when this compiler executes.
 
 Dependencies:Flex(Lexical Analyser),Bison(Parser Generator Tool)
 
